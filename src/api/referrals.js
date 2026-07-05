@@ -1,7 +1,7 @@
 import Cookies from 'js-cookie';
 
 const BASE_URL =
-  '[v9fes04dwf.execute-api.eu-north-1.amazonaws.com](https://v9fes04dwf.execute-api.eu-north-1.amazonaws.com/api/referrals)';
+  'https://v9fes04dwf.execute-api.eu-north-1.amazonaws.com/api/referrals';
 
 export const fetchReferrals = async ({ search, sort, id } = {}) => {
   const params = new URLSearchParams();
