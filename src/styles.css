@@ -1,0 +1,316 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #f4f6f8;
+  color: #1a1a1a;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-card {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 380px;
+}
+
+.brand-title {
+  margin: 0 0 0.25rem;
+}
+
+.tagline {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-group input {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.error-text {
+  color: #c0392b;
+  margin: 0.5rem 0;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1rem;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background: #fff;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 2rem;
+}
+
+.footer-brand {
+  font-weight: 700;
+}
+
+.footer nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.not-found-page,
+.dashboard-page,
+.referral-detail-page {
+  min-height: 100vh;
+  background: #f4f6f8;
+}
+
+.not-found-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.not-found-page a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.referral-details-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  max-width: 720px;
+  margin: 1.5rem 0;
+}
+
+.referral-details-list dt {
+  font-weight: 600;
+  color: #555;
+}
+
+.referral-details-list dd {
+  margin: 0.25rem 0 1rem;
+}
+
+.loading-text {
+  color: #555;
+  margin: 1.5rem 0;
+}
+
+.brand-link {
+  font-weight: 700;
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+.logout-btn {
+  background: #ef4444;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-header p {
+  color: #555;
+}
+
+.overview-section,
+.service-summary-section,
+.share-section,
+.referrals-section {
+  margin-top: 2rem;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.metrics-grid,
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.metric-label,
+.summary-label {
+  color: #666;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.metric-value,
+.summary-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0.25rem 0 0;
+}
+
+.share-field {
+  margin-top: 1rem;
+}
+
+.share-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.share-row input {
+  flex: 1;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.referrals-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.referrals-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.referrals-controls input[type='search'] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.75rem;
+  border-bottom: 1px solid #eee;
+}
+
+.referral-row {
+  cursor: pointer;
+}
+
+.referral-row:hover {
+  background: #f9fafb;
+}
+
+.empty-state {
+  text-align: center;
+  color: #888;
+  padding: 2rem !important;
+}
+
+.pagination {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.pagination-controls {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.pagination-controls button.active {
+  background: #1e3a8a;
+}
+
+.footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  color: #555;
+}
+
+.footer nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.referral-details-list {
+  margin-top: 1.5rem;
+}
+
+.referral-details-list div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #eee;
+  max-width: 400px;
+}
+
+.not-found-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
